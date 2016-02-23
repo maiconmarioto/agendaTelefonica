@@ -47,7 +47,7 @@
     </div>
     <div class="row">
         <div class="col-lg-12 btn-row">
-            <a href="#" class="btn btn-primary">Novo Contato</a>
+            <a href="{{ route('pessoa.create') }}" class="btn btn-primary">Novo Contato</a>
         </div>
     </div>
     <div class="row">

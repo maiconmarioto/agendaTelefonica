@@ -14,8 +14,23 @@
 //$app->get('/', ['as' => 'agenda.index','uses' => 'IndexController@index']);
 
 $app->get('/contato/novo', [
-    'as' => 'agenda.index',
-    'uses' => 'AgendaController@index'
+    'as' => 'pessoa.create',
+    'uses' => 'PessoaController@create'
+]);
+
+$app->post('/contato', [
+    'as' => 'pessoa.store',
+    'uses' => 'PessoaController@store'
+]);
+
+$app->get('/contato/{id}/editar', [
+    'as' => 'pessoa.edit',
+    'uses' => 'PessoaController@edit'
+]);
+
+$app->put('/contato/{id}', [
+    'as' => 'pessoa.update',
+    'uses' => 'PessoaController@update'
 ]);
 
 $app->get('/', [
