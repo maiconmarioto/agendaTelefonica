@@ -28,11 +28,19 @@ $factory->define(\CodeAgenda\Entities\Pessoa::class, function($faker){
     ];
 });
 
-$factory->define(\CodeAgenda\Entities\Telefone::class, function($faker){
+$factory->define(\CodeAgenda\Entities\Email::class, function($faker) {
     return [
-        'descricao' => $faker->randomElement(['Residencial','Comercial','Celular','Recados']),
-        'codpais' => $faker->optional(0.7,55)->numberBetween(1,197),
-        'ddd' => $faker->numberBetween(11,91),
+        'descricao' => $faker->randomElement(['Pessoal', 'Comercial']),
+        'email' => $faker->email,
+        'pessoa_id' => $faker->numberBetween(1,30)
+    ];
+});
+
+$factory->define(\CodeAgenda\Entities\Telefone::class, function($faker) {
+    return [
+        'descricao' => $faker->randomElement(['Residencial', 'Comercial', 'Celular', 'Recados']),
+        'codpais' => $faker->optional(0.7, 55)->numberBetween(1,197),
+        'ddd' => $faker->numberBetween(11, 91),
         'prefixo' => $faker->randomNumber(4),
         'sufixo' => $faker->randomNumber(4),
         'pessoa_id' => $faker->numberBetween(1,30)

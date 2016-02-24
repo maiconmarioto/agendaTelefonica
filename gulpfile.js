@@ -8,7 +8,7 @@ elixir(function(mix) {
     //  mix.livereload();
 });
 
-elixir( function(mix) {
+elixir(function(mix) {
     mix.copy(bowerDir + 'bootstrap/fonts', 'public/fonts')
         .copy(bowerDir + 'font-awesome/fonts', 'public/fonts')
 

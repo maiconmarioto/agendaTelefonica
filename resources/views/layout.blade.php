@@ -24,13 +24,13 @@
         <div class="col-lg-12 page-header">
             <h1>
                 Viaconect <br />
-                <small><i class="glyphicon glyphicon-phone-alt"></i> Agenda Telefonica</small>
+                <small> <a href="{{ url() }}"> <i class="glyphicon glyphicon-phone-alt"></i>  Agenda Telefonica</small> </a>
                 <span class="pull-right">
                     <form action="{{ route('agenda.busca') }}" method="post" class="form-inline">
                         <div class="input-group">
                             <input type="text" name="busca" class="form-control" placeholder="Pesquisar Contato...">
                               <span class="input-group-btn">
-                                <button class="btn btn-default" type="button"><i class="fa fa-search"></i></button>
+                                <button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
                               </span>
                         </div><!-- /input-group -->
                     </form>

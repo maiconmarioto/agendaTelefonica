@@ -15,7 +15,7 @@ use Illuminate\Http\Request;
 
 class AgendaController extends Controller
 {
-    public function index ($letra = "A")
+    public function index ($letra = "")
     {
         $pessoas = Pessoa::where('apelido', 'like', $letra . '%')->get()->sortBy('apelido');
         return view('agenda', compact('pessoas'));
@@ -27,7 +27,7 @@ class AgendaController extends Controller
         if ($string == '') {
             $pessoas = Pessoa::all()->sortBy('apelido');
         } else {
-            $pessoas = Pessoa::where('apelido', 'like', '%' . $string . '%')->orWhere('name', 'like', '%' . $string . '%')->get()->sortBy('apelido');
+            $pessoas = Pessoa::where('apelido', 'like', '%' . $string . '%')->orWhere('nome', 'like', '%' . $string . '%')->get()->sortBy('apelido');
         }
         return view('agenda', compact('pessoas'));
     }

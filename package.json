@@ -5,6 +5,6 @@
     "laravel-elixir-livereload": "^1.0"
   },
   "dependencies":{
-    "laravel-elixir": "^3.0.0"
+    "laravel-elixir": "*"
   }
 }
